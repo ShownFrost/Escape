@@ -93,28 +93,30 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <style>
-  /* Reset and cover full browser window */
   html, body {
     margin: 0 !important;
     padding: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
+    width: 100% !important;
+    height: 100% !important;
     overflow: hidden !important;
-    background-color: #000 !important;
-    display: grid !important;
-    place-items: center !important; /* Forces strict horizontal and vertical center */
+    background-color: #222226 !important; /* Matches your current dark gray background */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
-  /* Override Godot's default container elements */
-  #canvas-container, #container, #canvas, canvas {
+  /* Override Godot's container & canvas styling */
+  #canvas-container, #canvas {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
+    display: block !important;
     max-width: 100vw !important;
     max-height: 100vh !important;
-    object-fit: contain !important;
+    width: auto !important;
+    height: auto !important;
   }
 
   /* Mobile Portrait Warning Overlay */
@@ -154,7 +156,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9617852,"index.wasm":39513091},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9618060,"index.wasm":39513091},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
